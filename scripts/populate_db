@@ -3,5 +3,5 @@
 # stop script when an error occurs
 set -e
 
-psql bookCase -q -f "./database/init.sql"
+psql bookcase1 -q -f "./database/init.sql"
 echo "Populated database tables"

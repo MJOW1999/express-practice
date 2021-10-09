@@ -6,8 +6,8 @@ set -e
 psql -q -c "CREATE USER mine SUPERUSER PASSWORD 'pass123'"
 echo "Created Postgres user 'mine'"
 
-psql -q -c "CREATE DATABASE bookCase1 WITH OWNER mine"
-echo "Created Postgres database 'bookCase1'"
+psql -q -c "CREATE DATABASE bookcase1 WITH OWNER mine"
+echo "Created Postgres database 'bookcase1'"
 
 cp example.env .env
 echo "Created .env containing DATABASE_URL"
