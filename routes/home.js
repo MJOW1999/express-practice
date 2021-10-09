@@ -2,7 +2,10 @@ const db = require("../database/connection.js");
 
 function get(request, response) {
     db.query("SELECT * FROM users").then((result) => {
-      console.log(result);
+      console.log(result.rows);
+      response.send(result.rows);
     });
-    response.send("<h1>Hello world</h1>");
+    // response.send(result.rows);
   }
+
+  module.exports = { get };
